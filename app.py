@@ -33,6 +33,7 @@ if "selected_model" not in st.session_state:
 models = {
     "gemma-7b-it": {"name": "Gemma-7b-it", "tokens": 8192, "developer": "Google"},
     "gemma2-9b-it": {"name": "Gemma2-9b-it", "tokens": 8192, "developer": "Google"},
+    "llama3-groq-70b-8192-tool-use-preview": {"name": "llama3-groq-70b-8192-tool-use-preview", "tokens": 8192, "developer": "groq"},
     "llama2-70b-4096": {"name": "LLaMA2-70b-chat", "tokens": 4096, "developer": "Meta"},
     "llama3-70b-8192": {"name": "LLaMA3-70b-8192", "tokens": 8192, "developer": "Meta"},
     "llama3-8b-8192": {"name": "LLaMA3-8b-8192", "tokens": 8192, "developer": "Meta"},
