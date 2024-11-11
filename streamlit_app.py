@@ -1,6 +1,8 @@
 import streamlit as st
 from typing import Generator
 from groq import Groq
+import os
+from dotenv import load_dotenv
 
 st.set_page_config(page_icon="💬", layout="wide",
                    page_title="Groq Goes Brrrrrrrr...")
@@ -18,9 +20,17 @@ icon("🏎️")
 
 st.subheader("Groq Chat Streamlit App", divider="rainbow", anchor=False)
 
-client = Groq(
-    api_key=st.secrets["GROQ_API_KEY"],
-)
+# client = Groq(
+#     api_key=st.secrets["GROQ_API_KEY"],
+# )
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the API key from the environment variable
+groq_api_key = os.getenv("GROQ_API_KEY")
+
+client = Groq(api_key=groq_api_key)
 
 # Initialize chat history and selected model
 if "messages" not in st.session_state:
